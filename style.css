@@ -1,0 +1,434 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: "Public Sans", sans-serif;
+    background: var(--very-light-gray);
+    overflow-x: hidden;
+}
+
+:root {
+    --dark-blue: #2d314d;
+    --lime-green: #31d35c;
+    --bright-cyan: #2bb7da;
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    background: var(--dark-blue);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--white);
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.061);
+    z-index: 1000;
+    position: fixed;
+    width: 100vw;
+}
+
+header img {
+    width: auto;
+    height: 24px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul li {
+    font-size: 0.9rem;
+    margin-right: 2rem;
+    color: var(--grayish-blue);
+    cursor: pointer;
+    border-bottom: 4px transparent solid;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+header ul li:hover {
+    color: var(--dark-blue);
+    border-image: linear-gradient(
+            90deg,
+            rgba(49, 211, 92, 1) 0%,
+            rgba(43, 183, 218, 1) 100%
+        )
+        1;
+    border-image-slice: 1;
+    border-width: 0 0 4px 0;
+}
+
+.button-request {
+    cursor: pointer;
+    font-family: "Public Sans", sans-serif;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    color: var(--white);
+    background: linear-gradient(
+        90deg,
+        rgba(49, 211, 92, 1) 0%,
+        rgba(43, 183, 218, 1) 100%
+    );
+}
+
+.button-request:hover {
+    background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0.5) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(49, 211, 92, 1) 0%,
+            rgba(43, 183, 218, 1) 100%
+        );
+}
+
+.first-article {
+    padding-top: 10rem;
+    display: flex;
+}
+
+.first-article .background {
+    position: absolute;
+    height: auto;
+    width: 80vw;
+    top: -220px;
+    left: 800px;
+    z-index: 1;
+}
+
+.first-article .mockups {
+    position: absolute;
+    width: 51vw;
+    height: auto;
+    top: -62px;
+    left: 1020px;
+    z-index: 10;
+}
+
+.first-article section {
+    width: 460px;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+    margin-left: 18rem;
+}
+
+.first-article section h1 {
+    font-size: 3.8rem;
+    color: var(--dark-blue);
+    font-weight: 300;
+    margin-bottom: 1.8rem;
+}
+
+.first-article section p {
+    color: var(--grayish-blue);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.second-article {
+    background: var(--light-grayish-blue);
+    padding-left: 18rem;
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+}
+
+.second-article h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.second-article p {
+    color: var(--grayish-blue);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.container-second-article {
+    display: flex;
+    margin-top: 4.5rem;
+}
+
+.container-second-article section {
+    width: 300px;
+    margin-right: 3.4rem;
+}
+
+.container-second-article img {
+    margin-bottom: 2.5rem;
+}
+
+.container-second-article h3 {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.latest-article {
+    margin-left: 18rem;
+    margin-top: 7rem;
+}
+
+.latest-article h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.container-latest-article {
+    display: flex;
+}
+
+.container-latest-article section {
+    background: var(--white);
+    width: 300px;
+    margin-right: 2.5rem;
+    cursor: pointer;
+}
+
+.container-latest-article img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.container-latest-article h4 {
+    margin-top: 1.8rem;
+    font-size: 0.75rem;
+    color: var(--grayish-blue);
+    margin-bottom: 1rem;
+}
+
+.container-latest-article section div {
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+}
+
+.container-latest-article h5 {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.container-latest-article h5:hover {
+    color: #2bdac6;
+}
+
+.container-latest-article p {
+    color: var(--grayish-blue);
+    font-size: 0.93rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+footer {
+    margin-top: 6rem;
+    background: var(--dark-blue);
+    padding-left: 18rem;
+    display: flex;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    align-items: center;
+}
+
+.footer-first-div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12rem;
+}
+
+.logo-footer {
+    margin-bottom: 3rem;
+    width: 160px;
+}
+
+footer .first-list {
+    margin-right: 11rem;
+}
+
+footer .last-div {
+    margin-left: 21rem;
+    text-align: right;
+    color: var(--grayish-blue);
+}
+
+footer .last-div button {
+    margin-bottom: 2rem;
+}
+
+footer .last-div p {
+    font-size: 1.03rem;
+}
+
+footer ul li {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+footer ul li:hover {
+    color: #2bdac6;
+}
+
+footer .list {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.reseaux img {
+    margin-right: 0.7rem;
+    cursor: pointer;
+}
+
+.reseaux img:hover {
+    filter: invert(20%) sepia(85%) saturate(439%) hue-rotate(95deg)
+        brightness(88%) contrast(92%);
+}
